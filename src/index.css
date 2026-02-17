@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  :root {
+    --background: 220 20% 10%;
+    --foreground: 210 20% 90%;
+
+    --card: 220 18% 13%;
+    --card-foreground: 210 20% 90%;
+
+    --popover: 220 18% 13%;
+    --popover-foreground: 210 20% 90%;
+
+    --primary: 32 95% 55%;
+    --primary-foreground: 220 20% 8%;
+
+    --secondary: 220 15% 18%;
+    --secondary-foreground: 210 20% 85%;
+
+    --muted: 220 14% 16%;
+    --muted-foreground: 215 15% 55%;
+
+    --accent: 0 75% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 15% 20%;
+    --input: 220 15% 20%;
+    --ring: 32 95% 55%;
+
+    --radius: 0.75rem;
+
+    --warning: 45 100% 50%;
+    --warning-foreground: 220 20% 8%;
+
+    --success: 142 70% 45%;
+    --success-foreground: 0 0% 100%;
+
+    --risk-low: 142 70% 45%;
+    --risk-moderate: 45 100% 50%;
+    --risk-high: 0 75% 55%;
+
+    --glow-amber: 0 0% 0% / 0;
+    --glow-red: 0 0% 0% / 0;
+
+    --sidebar-background: 220 20% 8%;
+    --sidebar-foreground: 210 20% 85%;
+    --sidebar-primary: 32 95% 55%;
+    --sidebar-primary-foreground: 220 20% 8%;
+    --sidebar-accent: 220 15% 18%;
+    --sidebar-accent-foreground: 210 20% 85%;
+    --sidebar-border: 220 15% 20%;
+    --sidebar-ring: 32 95% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+
+  code, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer utilities {
+  .glow-amber {
+    box-shadow: 0 0 20px hsl(32 95% 55% / 0.15), 0 0 60px hsl(32 95% 55% / 0.05);
+  }
+
+  .glow-red {
+    box-shadow: 0 0 20px hsl(0 75% 55% / 0.2), 0 0 60px hsl(0 75% 55% / 0.08);
+  }
+
+  .glow-green {
+    box-shadow: 0 0 20px hsl(142 70% 45% / 0.15), 0 0 60px hsl(142 70% 45% / 0.05);
+  }
+
+  .text-gradient-amber {
+    background: linear-gradient(135deg, hsl(32 95% 55%), hsl(40 100% 65%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .glass-card {
+    background: hsl(220 18% 13% / 0.8);
+    backdrop-filter: blur(12px);
+    border: 1px solid hsl(220 15% 22%);
+  }
+
+  @keyframes pulse-ring {
+    0% { transform: scale(0.8); opacity: 1; }
+    100% { transform: scale(2.5); opacity: 0; }
+  }
+
+  .animate-pulse-ring {
+    animation: pulse-ring 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+  }
+
+  @keyframes scan-line {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(100%); }
+  }
+
+  .animate-scan {
+    animation: scan-line 3s ease-in-out infinite;
+  }
+}
