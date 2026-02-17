@@ -1,81 +1,66 @@
 # 🔥 Wildfire Risk Intelligence
 
-A real-time AI-powered wildfire risk prediction system built with React, TypeScript, and Machine Learning.
+An advanced, real-time AI-powered system designed to predict wildfire risks by analyzing meteorological data. This application integrates live weather updates with a custom Machine Learning model to provide actionable safety insights.
 
-This application analyzes live weather data and generates wildfire risk predictions using a custom AI model deployed on Hugging Face.
+### 🌐 Live Demo
+👉 **[View the Dashboard](https://ww3carla.github.io/Forest-Fire-Prediction-Frontend/)**
 
 ---
 
 ## 🌍 Overview
+Wildfire Risk Intelligence bridge the gap between complex environmental data and user-friendly safety monitoring. By combining real-time API data with AI, the system evaluates:
 
-Wildfire Risk Intelligence combines:
-
-- 🌡 Real-time weather data
-- 🤖 AI-based fire risk prediction
-- 📊 Interactive dashboard visualization
-- 🗺 Map-based location intelligence
-- ⚠ Risk assessment & recommendations
-
-The system provides an estimated wildfire risk percentage based on environmental conditions.
+* 🌡 **Live Meteorological Conditions**: Fetching current data for any city.
+* 🤖 **AI Prediction**: Using a custom model hosted on Hugging Face.
+* 📊 **Visual Analytics**: Dynamic gauges and risk classifications.
+* 🗺 **Geospatial Context**: Map integration for location tracking.
 
 ---
 
-## 🚀 Features
-
-- 🔎 City-based weather lookup
-- 📡 Live weather data from OpenWeather API
-- 🤖 AI wildfire prediction model (Hugging Face Space)
-- 📊 Risk percentage gauge
-- 🌎 Geographic coordinates mapping
-- 📈 Dynamic risk classification (Low / Moderate / High)
-- 💡 Smart safety recommendations
-- 🌙 Modern dark UI design
-- 📱 Fully responsive layout
+## 🚀 Key Features
+* **Intelligent Lookup**: City-based search powered by the OpenWeather API.
+* **AI Assessment**: Real-time inference from a FastAPI-based AI model.
+* **Interactive UI**: Modern dashboard with high-visibility risk gauges.
+* **Smart Recommendations**: Dynamic safety tips based on calculated risk levels.
+* **Dark Mode Aesthetic**: A professional, high-contrast UI designed for clarity.
+* **Mobile Responsive**: Optimized for use on desktops, tablets, and smartphones.
 
 ---
 
 ## 🛠 Tech Stack
 
 ### Frontend
-- Vite
-- React
-- TypeScript
-- Tailwind CSS
-- shadcn/ui
-- React Router
-- React Query
+* **Vite & React**: For a high-performance, reactive user interface.
+* **TypeScript**: Ensuring code reliability and type safety.
+* **Tailwind CSS & shadcn/ui**: For modern, accessible, and fast styling.
+* **React Query**: Efficient server-state management for API calls.
 
-### Backend / AI
-- Python (FastAPI)
-- Machine Learning model
-- Deployed on Hugging Face Spaces
+### Backend & AI
+* **Python (FastAPI)**: High-performance API serving the ML model.
+* **Machine Learning**: Custom-trained model (Random Forest/XGBoost).
+* **Hugging Face Spaces**: Cloud hosting for the AI inference engine.
 
-### APIs
-- OpenWeather API (weather data)
-- Custom Fire Prediction API (Hugging Face)
+---
 
-🔌 API Endpoints
-Weather Data
-https://api.openweathermap.org/data/2.5/weather
-Fire Prediction Model
-https://carlaww3-fire-prediction-api.hf.space/predict
-📊 How It Works
-User enters a city name.
+## 🔌 API Integration
 
-Weather data is fetched from OpenWeather API.
+### ☁️ Weather Data
+`https://api.openweathermap.org/data/2.5/weather`
 
-Temperature, humidity, and wind speed are sent to the AI model.
+### 🤖 AI Prediction Engine
+`https://carlaww3-fire-prediction-api.hf.space/predict`
+*(Backend repository available [here](URL_CATRE_REPO_BACKEND))*
 
-The AI model calculates wildfire risk.
+---
 
-The frontend displays:
+## 📊 How It Works
+1.  **Input**: User searches for a city.
+2.  **Fetch**: Application retrieves temperature, humidity, and wind speed.
+3.  **Process**: Weather data is sent to the Hugging Face AI endpoint.
+4.  **Analyze**: The model calculates the ignition and spread probability.
+5.  **Visualize**: The dashboard renders the risk percentage, status (Low to Extreme), and safety protocols.
 
-Risk percentage
+---
 
-Status classification
-
-Safety recommendation
-
-👩‍💻 Author
-Carla Bozintan
-
+## 👩‍💻 Author
+**Carla Bozintan**
